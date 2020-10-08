@@ -1,5 +1,5 @@
 #!/bin/bash
-# Portable SSH Server by PANCHO7532
+# Portable SSH Server with GitHub Actions by PANCHO7532
 # This script is executed when GitHub actions is initialized.
 # Prepares dependencies, ngrok, and all stuff
 
