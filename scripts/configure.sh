@@ -12,7 +12,7 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
 chmod +x ngrok
 
-# Third, configure dropbear, squid, and stunnel
+# Third, configure dropbear
 sudo chmod 0777 /etc/default/dropbear
 sudo chmod 0777 /etc/shells
 sudo cp ./resources/dropbear_cfg.conf /etc/default/dropbear
