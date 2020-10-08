@@ -28,7 +28,7 @@ sudo make install
 cd $GITHUB_WORKSPACE
 
 # 5th, configuring users and etc
-sudo echo -e "runner:$RUNNER_PASSWORD\r\n" | sudo chpasswd
+sudo echo -e "runner:$RUNNER_PASSWORD" | sudo chpasswd
 
 # 6th, starting stuff
 sudo service dropbear restart
