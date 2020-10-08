@@ -1,0 +1,17 @@
+name: Ubuntu
+on: [push]
+defaults:
+  run:
+    shell: bash
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Preparing environment...
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        RUNNER_PASSWORD: ${{ secrets.RUNNER_PASSWORD }}
+      run: ./scripts/configure.sh
+    - name: Starting tunnels in ngrok
+      run: ./ngrok tcp 43672
